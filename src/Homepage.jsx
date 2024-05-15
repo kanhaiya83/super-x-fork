@@ -1,25 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import './App.css';
 import { LuArrowDown, LuLayoutDashboard, LuScanFace, LuSendHorizonal, LuSettings, LuStore } from 'react-icons/lu';
-import {Link}from 'react-router-dom';
-
-const Navbar = () => {
-  return (
-    <nav className="navbar-container">
-      <div className="logo"><img src='./word-white-logo.png'/></div>
-      <div className="links">
-        <a href="#home" className="link-item">Home</a>
-        <a href="#features" className="link-item">Features</a>
-        <a href="#pricing" className="link-item">Pricing</a>
-        <a href="#faqs" className="link-item">Faqs</a>
-      </div>
-      <Link to={'/dashboard'}>
-      <button className="get-started-button">Sign In</button>
-      </Link>
-    </nav>
-  );
-};
-
+import Navbar from './components/Navbar';
 function TwitterCard({name, username, tweet, pic, verify }) {
   return (
     <div style={{background: '#00000033',backdropFilter: 'blur(26px)', borderRadius: '1rem', border: '1px solid #8080806e', minWidth: '20rem', margin: '0 1rem'}}>

@@ -1,12 +1,12 @@
 @font-face{
   font-family: 'b_reg';
-  src: url(./PilatExtended-Regular.ttf);
+  src: url(./../fonts/PilatExtended-Regular.ttf);
 }
 html{
   scroll-behavior: smooth;
 }
 *{
-  font-family: 'b_reg';
+  font-family: b_reg;
 
 }
 a{
@@ -524,6 +524,7 @@ background: #c4c4c430;
   justify-content: space-between;
   align-items: center;
   transition: 0.2s ease;
+  background: transparent;
 }
 
 .sidebarButton:hover{
