@@ -8,7 +8,7 @@ import request from "../../config/request";
 import { toast } from "react-toastify";
 
 const ReferTab = () => {
-  const { userData, setCounter } = useAuthContext();
+  const { userData, setCounter,  user } = useAuthContext();
   const [enteredCode, setEnteredCode] = useState("");
   const [enteredRedeemCode, setEnteredRedeemCode] = useState("");
   const [copied, setCopied] = useState(false);
@@ -97,7 +97,7 @@ const ReferTab = () => {
             className="gPurple"
             style={{ textAlign: "center", width: "100%", fontSize: "2rem" }}
           >
-            Hamza Rizvi
+            {user.displayName?.split(" ")[0]}
           </h1>
           <h2
             style={{
@@ -107,7 +107,7 @@ const ReferTab = () => {
               margin: "0",
             }}
           >
-            <span className="gPurple">4</span> Referred
+            <span className="gPurple">{userData.referredUsers?.length || 0}</span> Referred
           </h2>
           <img
             src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0d3c6293570193.5e697092c2a56.gif"
@@ -128,7 +128,7 @@ const ReferTab = () => {
               <GrUserFemale style={{ marginRight: "1rem" }}></GrUserFemale>
 
               <h1 style={{ fontSize: "1rem" }}>
-                {copied ? "Code Copied" : "Copy Referral"}
+                {copied ? "Code Copied" : "Copy Referral Code"}
               </h1>
             </div>
             <div className="sidebarButton m-0">
