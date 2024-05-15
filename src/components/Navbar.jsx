@@ -12,8 +12,8 @@ const Navbar = () => {
             <a href="#pricing" className="link-item">Pricing</a>
             <a href="#faqs" className="link-item">Faqs</a>
           </div>
-          <Link to={user ?"/dashboard" :'/login'}>
-          <button className="get-started-button">{user? "Dashboard":"Sign In"}</button>
+          <Link className="get-started-button" to={user ?"/dashboard" :'/login'}>
+          {user? "Dashboard":"Sign In"}
           </Link>
         </nav>
       );
