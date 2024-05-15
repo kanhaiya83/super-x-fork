@@ -81,14 +81,14 @@ const TonesTab = () => {
             }}
           ></input>
         </div>
-        <button
+        <div
         onClick={addToneMutation.mutate}
           className="sidebarButton"
-          style={{ width: "10%", minWidth: "7rem", margin: "0" }}
+          style={{ width: "10%", minWidth: "7rem",marginTop:"0",marginBottom:"0" }}
         >
           <GrAddCircle style={{ marginRight: "1rem" }}></GrAddCircle>
             <h1 style={{ fontSize: "1rem" }}>Add</h1>
-        </button>
+        </div>
       </div>
 
       <div

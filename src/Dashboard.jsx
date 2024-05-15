@@ -7,6 +7,7 @@ import { useAuthContext } from "./context/authContext";
 import MarketPlaceTab from "./components/dashboard/MarketPlaceTab";
 import MyPromptsTab from "./components/dashboard/MyPromptsTab";
 import TonesTab from "./components/dashboard/TonesTab";
+import ReferTab from "./components/dashboard/ReferTab";
 
 
 function Sidebar(){
@@ -226,46 +227,6 @@ function SectionAvatar(){
 
 
 
-function SectionRefer(){
-    return(     
-    <>
-    <h1 style={{fontSize: '1.2rem', margin: '1rem 0', color: '#b4b4b4eb', marginTop: '2rem'}}>/ Refer</h1>
-
-    <div className="profileInfoCard" style={{minHeight:'6rem', height:'6rem'}}>
-                    {/* <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/02f0b893570193.5e697092c4790.gif"></img> */}
-                    <div style={{margin:'auto', width:'90%'}}>
-                        <h1><span className="gPurple">Refer</span> Your Friends</h1>
-                        <h2>Earn 30 more requests per referral</h2>
-                    </div>
-    </div>     
-
-    <div style={{display: 'flex', justifyContent: 'center',alignItems:'center', width: '100%', marginTop:'2rem'}}>
-        <div className="promptCard" style={{width:'95%', maxWidth:'30rem'}}>
-            <h1 className="gPurple" style={{textAlign:"center", width:'100%', fontSize:'2rem'}}>Hamza Rizvi</h1>
-            <h2 style={{textAlign:"center", width:'100%', fontSize:'1rem', margin:'0'}}>
-                <span className="gPurple">4</span> Reffered
-            </h2>
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/0d3c6293570193.5e697092c2a56.gif" style={{width: '20%', margin: '1rem 40%'}}></img>
-            <div className="sidebarButton" style={{width:"90%", minWidth:'10rem', maxWidth:'20rem' , margin:'0 auto'}}>
-                <GrUserFemale    style={{marginRight:'1rem'}}></GrUserFemale >
-                <Link to={"/dashboard/home"}>
-                <h1 style={{fontSize:'1rem'}}>Copy Refferal</h1>
-                </Link>
-            </div>
-            <div className="sidebarButton" style={{width:"90%", minWidth:'10rem', maxWidth:'20rem' , margin:'1rem auto'}}>
-                <GrValidate  style={{marginRight:'1rem'}}></GrValidate   >
-                <input placeholder="Enter Referral Code" style={{background: 'transparent', width: '100%',textAlign:'right', outline: 'none', border: 'none', color: 'white', fontSize: '0.9rem'}}></input>
-            </div>
-            <div className="sidebarButton" style={{width:"90%", minWidth:'10rem', maxWidth:'20rem' , margin:'1rem auto'}}>
-                <GrKey   style={{marginRight:'1rem'}}></GrKey    >
-                <input placeholder="Redeem Coupon Code" style={{background: 'transparent', width: '100%',textAlign:'right', outline: 'none', border: 'none', color: 'white', fontSize: '0.9rem'}}></input>
-            </div>
-        </div>
-
-    </div>
-    </>
-    )
-}
 
 
 function MainView(){
@@ -277,7 +238,7 @@ function MainView(){
                 {location.pathname === '/dashboard/marketplace' && <MarketPlaceTab />}
                 {location.pathname === '/dashboard/tones' && <TonesTab />}
                 {location.pathname === '/dashboard/avatars' && <SectionAvatar />}
-                {location.pathname === '/dashboard/refer' && <SectionRefer />}
+                {location.pathname === '/dashboard/refer' && <ReferTab />}
 
         
             
