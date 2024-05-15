@@ -8,6 +8,7 @@ import MarketPlaceTab from "./components/dashboard/MarketPlaceTab";
 import MyPromptsTab from "./components/dashboard/MyPromptsTab";
 import TonesTab from "./components/dashboard/TonesTab";
 import ReferTab from "./components/dashboard/ReferTab";
+import { logout } from "./config/firebase";
 
 
 function Sidebar(){
@@ -77,12 +78,10 @@ function Sidebar(){
                 </Link>
             </div>
             </div>
-            <div className="sidebarButton" style={{marginTop: 'auto', background: 'black', flexDirection: 'row-reverse', border: '0', marginBottom: '0', boxShadow: 'rgb(151 115 210 / 42%) 0px 0rem 8rem', width: '90%', padding: '0 5%', borderRadius: '0', height: '4rem'}}>
+            <button className="sidebarButton box-content" onClick={logout} style={{marginTop: 'auto', background: 'black', flexDirection: 'row-reverse', border: '0', marginBottom: '0', boxShadow: 'rgb(151 115 210 / 42%) 0px 0rem 8rem', width: '90%', padding: '0 5%', borderRadius: '0', height: '4rem'}}>
                 <GrLogout style={{marginRight:'1rem', fontSize:'1.5rem'}}></GrLogout  >
-                <Link to="/">
                     <h1 style={{fontSize:'1rem'}}>Log Out</h1>
-                </Link>
-            </div>
+            </button>
         </div>
     )
 }
