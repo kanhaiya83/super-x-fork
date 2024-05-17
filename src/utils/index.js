@@ -1,6 +1,7 @@
 import writeXlsxFile from "write-excel-file";
 import { child, get } from "firebase/database";
-import { db } from "../src/config/firebase";
+import { db } from "../config/firebase";
+
 
 export const getDbItem = async(itemPath)=>{
   const itemRef = child(db, itemPath);
