@@ -14,13 +14,13 @@ import { errorToast, successToast } from "../utils/notify";
 import { toast } from "react-toastify";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKjt1_vByNhUjT0tveQjuRoz5PBUunfiE",
-  authDomain: "react-ai-extension.firebaseapp.com",
-  projectId: "react-ai-extension",
-  storageBucket: "react-ai-extension.appspot.com",
-  messagingSenderId: "510458035258",
-  appId: "1:510458035258:web:d96a42b1446a39981b4903",
-  measurementId: "G-8XV8EBPVBT",
+  apiKey: "AIzaSyAG4Q1VxF4RPr2DIk-JmREMbNULzAgnEvM",
+  authDomain: "superx-3a969.firebaseapp.com",
+  projectId: "superx-3a969",
+  storageBucket: "superx-3a969.appspot.com",
+  messagingSenderId: "664910032157",
+  appId: "1:664910032157:web:10e8950d18a200b3d945f4",
+  measurementId: "G-H40B7HSEGF"
 };
 
 const app = initializeApp(firebaseConfig);
