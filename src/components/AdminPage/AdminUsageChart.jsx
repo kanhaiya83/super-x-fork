@@ -18,6 +18,7 @@ import "chartjs-adapter-date-fns";
 ChartJS.register(
   LinearScale,
   LineElement,
+  CategoryScale,
   PointElement,
   TimeScale,
   Title,

@@ -40,7 +40,7 @@ const AdminLayout = () => {
 
   return (
     <>
-      <div className="w-full px-[5%] py-8">
+      <div className="w-full px-[5%] py-8 bg-white min-h-screen box-border">
         <div className="w-full flex justify-end gap-[5%]">
           <div className="flex items-center gap-8">
             <NavLink

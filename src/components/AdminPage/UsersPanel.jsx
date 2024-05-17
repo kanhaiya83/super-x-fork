@@ -57,22 +57,22 @@ const UsersPanel = () => {
       {/* <Scrollbar style={{width:"100%",height:"70vh"}}> */}
       <div className="grid grid-cols-[repeat(16,1fr)] w-full bg-slate-100 text-center mt-10 max-h-[1000px] overflow-scroll ">
         <div className=" col-span-1 p-2">
-          <h1 className="text-xl ">S No</h1>
+          <h1 className="text-sm ">S No</h1>
         </div>
         <div className=" col-span-4 p-2">
-          <h1 className="text-xl ">Email</h1>
+          <h1 className="text-sm ">Email</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Current Plan</h1>
+          <h1 className="text-sm ">Current Plan</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Request Today</h1>
+          <h1 className="text-sm ">Request Today</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Request this month</h1>
+          <h1 className="text-sm ">Request this month</h1>
         </div>
         <div className=" col-span-2 p-2">
-          <button></button>
+          <button className="hidden"></button>
         </div>
 
         {sortedData.map((c, i) => {
@@ -117,23 +117,23 @@ const RowItem = ({ data, index }) => {
   return (
     <>
       <div className=" col-span-1 p-2">
-        <h1>{index + 1}</h1>
+        <h1 className="text-sm">{index + 1}</h1>
       </div>
       <div className=" col-span-4 p-2">
-        <h1>{data.email}</h1>
+        <h1 className="text-sm">{data.email}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{planName[data.current_plan_id]}</h1>
+        <h1 className="text-sm">{planName[data.current_plan_id]}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{data.daily_requests_count}</h1>
+        <h1 className="text-sm">{data.daily_requests_count}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{data.monthly_requests_count}</h1>
+        <h1 className="text-sm">{data.monthly_requests_count}</h1>
       </div>
 
       <div className=" col-span-2 p-2">
-        <h1>
+        <h1 className="text-sm">
           {data.date
             ? new Date(data.date._seconds * 1000).toDateString()
             : new Date().toDateString()}

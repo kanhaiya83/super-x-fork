@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import CodeForm from "../CodeForm";
 import { downloadExcel } from "../../utils";
+import CodeForm from "./CodeForm";
 const CouponsPanel = () => {
   const { adminQuery } = useOutletContext();
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -22,25 +22,25 @@ const CouponsPanel = () => {
       </div>
       <div className="grid grid-cols-[repeat(24,1fr)] w-full bg-slate-100 text-center mt-10 max-h-[600px] overflow-scroll ">
         <div className=" col-span-1 p-2">
-          <h1 className="text-xl ">S No</h1>
+          <h1 className="text-sm ">S No</h1>
         </div>
         <div className=" col-span-6 p-2">
-          <h1 className="text-xl ">Manager Name</h1>
+          <h1 className="text-sm ">Manager Name</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Codes Count</h1>
+          <h1 className="text-sm ">Codes Count</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Codes Used</h1>
+          <h1 className="text-sm ">Codes Used</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Requests Per Code</h1>
+          <h1 className="text-sm ">Requests Per Code</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Status</h1>
+          <h1 className="text-sm ">Status</h1>
         </div>
         <div className=" col-span-3 p-2">
-          <h1 className="text-xl ">Date of Generation</h1>
+          <h1 className="text-sm ">Date of Generation</h1>
         </div>
         <div className=" col-span-2 p-2">
           <button></button>
@@ -89,22 +89,22 @@ const RowItem = ({ data, index }) => {
   return (
     <>
       <div className=" col-span-1 p-2">
-        <h1>{index + 1}</h1>
+        <h1 className="text-sm">{index + 1}</h1>
       </div>
       <div className=" col-span-6 p-2">
-        <h1>{data.managerName}</h1>
+        <h1 className="text-sm">{data.managerName}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{data.count}</h1>
+        <h1 className="text-sm">{data.count}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{data?.usedCodes?.length || 0}</h1>
+        <h1 className="text-sm">{data?.usedCodes?.length || 0}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>{data.requestCount}</h1>
+        <h1 className="text-sm">{data.requestCount}</h1>
       </div>
       <div className=" col-span-3 p-2">
-        <h1>
+        <h1 className="text-sm">
           {data.isRevoked ? (
             <span className="bg-red-500 p-1 rounded">Revoked</span>
           ) : (
