@@ -12,6 +12,7 @@ import UsersPanel from './components/AdminPage/UsersPanel';
 import PromptPanel from './components/AdminPage/PromptPanel';
 import StatsPage from './components/AdminPage/StatsPage';
 import AdminLayout from './components/AdminPage/AdminLayout';
+import PrivacyPolicyPage from './pages/PrivacyPolicy';
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const { user, loading } = useAuthContext();
@@ -27,6 +28,7 @@ function App() {
     <>
     <Routes>
       <Route path='/' element={<Homepage></Homepage>}></Route>
+      <Route path='/privacy-policy' element={<PrivacyPolicyPage/>}></Route>
       <Route path='/dashboard/*' element={<Dashboard></Dashboard>}></Route>
       <Route path='/login' element={<LoginPage/>}></Route>
       <Route path="/admin" element={<AdminLayout />}>
