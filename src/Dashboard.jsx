@@ -96,7 +96,8 @@ const ProgressBar = ({ percentage }) => {
   
 
 function SectionDashboard(){
-    const {limit,count}= useAuthContext()
+    const {limit,count,user}= useAuthContext()
+    const display_name = user?.displayName?.split(" ")[0] || "Jane"
     return(
     <>
     <h1 style={{fontSize: '1.2rem', margin: '1rem 0', color: '#b4b4b4eb', marginTop: '2rem'}}>/ DashBoard</h1>
@@ -104,7 +105,7 @@ function SectionDashboard(){
     <div className="profileInfoCard">
                     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/02f0b893570193.5e697092c4790.gif"></img>
                     <div style={{margin:'auto', width:'90%'}}>
-                        <h1>Hey <span className="gPurple">Hamza</span></h1>
+                        <h1>Hey <span className="gPurple">{display_name}</span></h1>
                         <h2>Have a nice day & Don't forget to grow your followers using SuperX</h2>
                     </div>
                     
