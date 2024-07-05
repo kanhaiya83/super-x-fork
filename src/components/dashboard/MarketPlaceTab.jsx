@@ -1,16 +1,19 @@
-import { GrCloudDownload, GrSearch } from "react-icons/gr";
+import { GrAddCircle, GrCloudDownload, GrSearch } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../context/authContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { collection, getDocs } from "firebase/firestore";
 import { firestoreDB } from "../../config/firebase";
 import MarketPlacePromptItemCard from "./MarketPlacePromptItemCard";
+import AddPromptModal from "./AddPromptModal";
 
 const MarketPlaceTab = () => {
   const { userData, user } = useAuthContext();
-
-  useEffect(() => {
+  const [searchKeyword, setSearchKeyword] = useState("");
+  const [modalOpen, setModalOpen] = useState(false)
+  const [dataToShowInPromptModal, setDataToShowInPromptModal] = useState(false)
+  useEffect(() => { 
     document.title = "SuperX | Marketplace";
   }, []);
 
@@ -35,6 +38,9 @@ const MarketPlaceTab = () => {
     { enabled: !!user }
   );
   const postsData = postsQuery?.data || [];
+  console.log("postData",postsData)
+  const filteredPostsData = searchKeyword ? postsData?.filter(p=>p.title?.toLowerCase()?.includes(searchKeyword.toLowerCase())) : postsData
+  console.log(404,filteredPostsData,searchKeyword)
   return (
     <>
       <h1
@@ -61,7 +67,7 @@ const MarketPlaceTab = () => {
         </div>
       </div>
       <div className="miniBar1">
-        <div className="sidebarButton" style={{ width: "95%", margin: "0" }}>
+        <div className="sidebarButton" style={{ width: "80%", margin: "0 10px 0 0"}}>
           <GrSearch style={{ marginRight: "1rem" }}></GrSearch>
           <input
             placeholder="Search Marketplace"
@@ -73,32 +79,29 @@ const MarketPlaceTab = () => {
               color: "white",
               fontSize: "0.9rem",
             }}
-          ></input>
+            value={searchKeyword}
+            onChange={(e)=>{setSearchKeyword(e.target.value)}}
+          />
         </div>
-        {/* <div className="sidebarButton" style={{width:"20%", minWidth:'10rem' , margin:'0'}}>
-                <GrAddCircle style={{marginRight:'1rem'}}></GrAddCircle >
-                <Link to={"/dashboard/home"}>
-                <h1 style={{fontSize:'1rem'}}>Upload prompt</h1>
-                </Link>
-            </div> */}
+        <div onClick={()=>{setDataToShowInPromptModal(false);setModalOpen(true)}} className="sidebarButton" style={{width:"20%",minWidth:'10rem' , margin:'0',padding:"0 16px"}}>
+                <GrAddCircle style={{marginRight:'1rem',width:"1rem"}}></GrAddCircle >
+                <h1 style={{fontSize:'1rem',whiteSpace:"nowrap"}}>Add Your Prompt</h1>
+            </div>
       </div>
 
       <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "2rem 0",
-          width: "100%",
-          margin: "2rem auto",
-        }}
+        className="w-full grid grid-cols-2 gap-12"
       >
-        {postsData.map((post) => {
+        {filteredPostsData.map((post) => {
           return (
-            <MarketPlacePromptItemCard key={post.id} data={post}/> 
+            <MarketPlacePromptItemCard key={post.id} data={post} setDataToShowInPromptModal={(d)=>{
+              setDataToShowInPromptModal(d)
+              setModalOpen(true)
+            }}/> 
           );
         })}
       </div>
+      <AddPromptModal openModal={modalOpen} setOpenModal={setModalOpen} showPromptData={dataToShowInPromptModal}/>
     </>
   );
 };
