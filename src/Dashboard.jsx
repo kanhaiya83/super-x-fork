@@ -39,7 +39,7 @@ function Sidebar(){
                 <GrFavorite style={{marginRight:'1rem'}}></GrFavorite >
                 </Link>
                 <Link to={"/dashboard/prompts"}>
-                <h1 style={{fontSize:'1rem'}}>Prompts</h1>
+                <h1 style={{fontSize:'1rem'}}>My Prompt</h1>
                 </Link>
             </div>
             <div className="sidebarButton">

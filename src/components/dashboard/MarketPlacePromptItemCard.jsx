@@ -38,7 +38,7 @@ const MarketPlacePromptItemCard = ({data,setDataToShowInPromptModal}) => {
       const userRef = doc(firestoreDB, "users",user?.uid)
       const userUpdate = await updateDoc(userRef,{prompt,post_id:id,})
       await queryClient.invalidateQueries({queryKey:["userData"]})
-      successToast("Set as active prompt successfully!!")
+      successToast("Set as the active prompt!!")
     },
   })
   return (

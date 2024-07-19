@@ -173,7 +173,9 @@ const MyPromptsTab = () => {
       </div>
      
         </div>
-      <div
+      <div>
+        <h1 className="mb-4">Saved Prompts</h1>
+        <div
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -183,9 +185,11 @@ const MyPromptsTab = () => {
           margin: "2rem auto",
         }}
       >
-        {savedPostsData.map((item) => {
+        {savedPostsData?.length ?savedPostsData.map((item) => {
           return <SavedPromptCard data={item} key={item.id} />;
-        })}
+        }):
+        <p>No saved prompts found!!</p> }
+      </div>
       </div>
     </>
   );
