@@ -9,6 +9,7 @@ import MyPromptsTab from "./components/dashboard/MyPromptsTab";
 import TonesTab from "./components/dashboard/TonesTab";
 import ReferTab from "./components/dashboard/ReferTab";
 import { logout } from "./config/firebase";
+import { getLast7DaysCount } from "./utils";
 
 
 function Sidebar(){
@@ -96,8 +97,11 @@ const ProgressBar = ({ percentage }) => {
   
 
 function SectionDashboard(){
-    const {limit,count,user}= useAuthContext()
-    const display_name = user?.displayName?.split(" ")[0] || "Jane"
+    const {limit,count,user,userData}= useAuthContext()
+    const { dayNames,
+        counts} = getLast7DaysCount(userData?.requestsData)
+    const {display_name} = user?.displayName?.split(" ")[0] || "Jane"
+    console.log(dayNames,counts)
     return(
     <>
     <h1 style={{fontSize: '1.2rem', margin: '1rem 0', color: '#b4b4b4eb', marginTop: '2rem'}}>/ DashBoard</h1>
@@ -120,8 +124,8 @@ function SectionDashboard(){
                 <div className="ProfileLineChart graphoptimizer">
                 <h1>Usage Per Week</h1>
                 <LineChart
-                    xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
-                    series={[{data: [2, 5.5, 2, 8.5, 1.5, 5],color: '#6fcc26'},]}
+                    xAxis={[{ scaleType: 'point',data:dayNames}]}
+                    series={[{data: counts,color: '#6fcc26'},]}
                     width={500}
                     height={300}
                     />

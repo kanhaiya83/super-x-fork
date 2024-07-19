@@ -34,10 +34,10 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
-    "write-excel-file": "^1.4.27",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4",
+    "write-excel-file": "^1.4.27",
     "zustand": "^4.3.9"
   },
   "devDependencies": {
