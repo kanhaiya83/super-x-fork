@@ -107,7 +107,7 @@ function Homepage() {
         <div className='animated-border-box-container' style={{ margin: '3rem auto' }}>
           <div className="animated-border-box-glow"></div>
           <div className="animated-border-box">
-            <a href={"https://t.me/clusterprotocolchat"} target='_blank_' rel="noopener noreferrer"><h1>Install Extension</h1></a>
+            <a href={"https://chromewebstore.google.com/detail/superx/gmafmgmalkidnhopkelmmkkogbneeedi"} target='_blank_' rel="noopener noreferrer"><h1>Install Extension</h1></a>
           </div>
         </div>
         <div style={{display:'flex',margin:'2rem 0', width: '80%', animation:'100s Unlimitedscroll infinite linear'}}>

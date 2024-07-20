@@ -23,7 +23,7 @@ function Sidebar(){
             <div className='animated-border-box-container' style={{ margin: '1rem auto' }}>
                 <div className="animated-border-box-glow"></div>
                 <div className="animated-border-box">
-                    <a href={"https://t.me/clusterprotocolchat"} target='_blank_' rel="noopener noreferrer"><h1><span className="gPurple">{limit-count}</span> Credits Left</h1></a>
+                    <h1><span className="gPurple">{limit-count}</span> Credits Left</h1>
                 </div>
             </div>
             <div className="sidebarButtonContainer">
