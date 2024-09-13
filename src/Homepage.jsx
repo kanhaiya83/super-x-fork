@@ -100,9 +100,9 @@ function Homepage() {
       <div className='backgroundImage'></div>
       <div className='heropage'>
         <img style={{ width: '30%',objectFit: 'contain', objectFit: 'contain', margin: "0 auto",filter: 'drop-shadow(-11px -6px 16px white)' }} src='./word-white-logo.png' alt="Logo" />
-        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Transform Your X Conversations</h1>
-        <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}> with <span className='gPurple'>AI-Generated Replies</span></h1>
-        <h1 className="gWhite" style={{ margin: '0 auto',marginTop:'1rem', fontSize:'1rem' }}> 4.5⭐  |  500+ Users</h1>
+        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your</h1>
+        <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}>X<span className='gPurple'>with Super X</span></h1>
+        {/* <h1 className="gWhite" style={{ margin: '0 auto',marginTop:'1rem', fontSize:'1rem' }}> 4.5⭐  |  500+ Users</h1> */}
 
         <div className='animated-border-box-container' style={{ margin: '3rem auto' }}>
           <div className="animated-border-box-glow"></div>
@@ -157,7 +157,7 @@ function Homepage() {
         </div>
       </div>
 
-      <div id="pricing">
+      {/* <div id="pricing">
         <h1 style={{color:'white', width:'100%', textAlign:'center', fontSize:'1.5rem', marginBottom:'3rem', marginTop:'0rem'}}>Choose Your <span className='gPurple'> Pricing </span></h1>
         <div style={{display:'flex',flexWrap:'wrap', justifyContent:'space-around'}}>
 
@@ -197,12 +197,15 @@ function Homepage() {
           
           
           
-      </div>
+      </div> */}
       <div id="faqs">
         <h1 style={{color:'white', width:'100%', textAlign:'center', fontSize:'1.5rem', marginBottom:'3rem', marginTop:'0rem'}}>Most Asked <span className='gPurple'> Questions </span></h1>
-        <FAQItem question={'How SuperX works?'} answer={"Our free plan is to help twitter enthusiast grow their account without struggling to replies conversation. Our business plan is to help twitter enthusiast grow their account without struggling to replies conversation."}/>
-        <FAQItem question={'How do SuperX work on Twitter?'} answer={"Our free plan is to help twitter enthusiast grow their account without struggling to replies conversation. Our business plan is to help twitter enthusiast grow their account without struggling to replies conversation."}/>
-        <FAQItem question={'What’s our free plan?'} answer={"Our free plan is to help twitter enthusiast grow their account without struggling to replies conversation. Our business plan is to help twitter enthusiast grow their account without struggling to replies conversation."}/>
+        <FAQItem question={`How does Super X work?`} answer={`Super X is an AI-powered tool that enhances your Twitter experience built by Cluster Protocol. It analyzes the context of conversations and generates intelligent replies, helping you engage more effectively with your audience. The tool integrates seamlessly with Twitter, allowing you to craft responses quickly and effortlessly.`}/>
+        <FAQItem question={`How can Super X improve my Twitter presence?`} answer={`Super X can significantly boost your Twitter engagement. It helps you respond more quickly and intelligently to conversations, saving you time while maintaining your personal tone. Many users report a noticeable boost in their profile engagement after using Super X.`}/>
+        <FAQItem question={`Is Super X difficult to set up and use?`} answer={`Not at all. Super X is designed to be user-friendly. You can easily install the extension and start using it right away. The intuitive interface allows you to choose different tones for your replies and customize the AI to your preferences.`}/>
+        <FAQItem question={`Can I customize the AI-generated responses?`} answer={`Absolutely. Super X allows you to define custom prompts and train the AI to match your unique voice and style. This ensures that the generated responses align with your personal brand and communication style.`}/>
+        <FAQItem question={`Is Super X compatible with all Twitter features?`} answer={`Super X is designed to work seamlessly with Twitter's core functionalities. It can help you craft replies, engage in conversations, and even assist with original tweets. However, for the most up-to-date information on compatibility, it's best to check the latest version of Super X.`}/>
+        <FAQItem question={`How does Super X ensure the quality of AI-generated responses?`} answer={`Super X uses advanced AI algorithms that analyze the context of tweets to generate appropriate and engaging responses. The system is continuously learning and improving. Additionally, you have the option to review and edit any AI-generated response before posting, ensuring quality control.`}/>
       </div>
 
     <footer>

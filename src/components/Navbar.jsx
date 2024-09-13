@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="links">
             <a href="#home" className="link-item">Home</a>
             <a href="#features" className="link-item">Features</a>
-            <a href="#pricing" className="link-item">Pricing</a>
+            {/* <a href="#pricing" className="link-item">Pricing</a> */}
             <a href="#faqs" className="link-item">Faqs</a>
           </div>
           <Link className="get-started-button" to={user ?"/dashboard" :'/login'}>
