@@ -63,7 +63,11 @@ const TypeEffectWithChangingTone = () => {
   }, [])
   
   return (
-      <div id="tone-container">Reply with <span id="tone"></span> <span id="blinkingCursor">|</span> <LuSendHorizonal style={{position:'absolute', right:'1rem', top:'1.5rem'}} /></div>
+      <div id="tone-container">Reply with <span id="tone"></span> <span id="blinkingCursor">|</span> 
+      <a href={"https://chromewebstore.google.com/detail/superx/gmafmgmalkidnhopkelmmkkogbneeedi"} target='_blank_' rel="noopener noreferrer">
+      <LuSendHorizonal style={{position:'absolute', right:'1rem', top:'1.5rem'}} />
+      </a>
+      </div>
   );
 };
 
@@ -102,6 +106,7 @@ function Homepage() {
       <div className='backgroundImage'></div>
       <div className='heropage'>
         <img style={{ width: '30%',objectFit: 'contain', objectFit: 'contain', margin: "0 auto",filter: 'drop-shadow(-11px -6px 16px white)' }} src='./word-white-logo.png' alt="Logo" />
+        <div style={{display:"flex",alignItems:"center",gap:"0.5rem",justifyContent:"center",marginTop:"-22px"}}><p>Powered by </p> <img src='./cluster-protocol.png' style={{width:"4.5rem"}}/></div>
         <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your <FaXTwitter style={{position:"relative",top:"3px"}}/></h1>
         <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}>with <span className='gPurple'>Super X</span></h1>
         {/* <h1 className="gWhite" style={{ margin: '0 auto',marginTop:'1rem', fontSize:'1rem' }}> 4.5⭐  |  500+ Users</h1> */}
@@ -153,7 +158,7 @@ function Homepage() {
           <div className='animated-border-box-container' style={{ margin: '3rem 0' }}>
           <div className="animated-border-box-glow"></div>
           <div className="animated-border-box">
-            <a href={"https://t.me/clusterprotocolchat"} target='_blank_' rel="noopener noreferrer"><h1>Boost Your Profile</h1></a>
+          <a href={"https://chromewebstore.google.com/detail/superx/gmafmgmalkidnhopkelmmkkogbneeedi"} target='_blank_' rel="noopener noreferrer"><h1>Boost Your Profile</h1></a>
           </div>
         </div>
         </div>
