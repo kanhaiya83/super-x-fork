@@ -102,7 +102,7 @@ function Homepage() {
       <div className='backgroundImage'></div>
       <div className='heropage'>
         <img style={{ width: '30%',objectFit: 'contain', objectFit: 'contain', margin: "0 auto",filter: 'drop-shadow(-11px -6px 16px white)' }} src='./word-white-logo.png' alt="Logo" />
-        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your <FaXTwitter/></h1>
+        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your <FaXTwitter style={{position:"relative",top:"3px"}}/></h1>
         <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}>with <span className='gPurple'>Super X</span></h1>
         {/* <h1 className="gWhite" style={{ margin: '0 auto',marginTop:'1rem', fontSize:'1rem' }}> 4.5⭐  |  500+ Users</h1> */}
 
