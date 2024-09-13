@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FaXTwitter } from "react-icons/fa6";
+
 // import './App.css';
 import { LuArrowDown, LuLayoutDashboard, LuScanFace, LuSendHorizonal, LuSettings, LuStore } from 'react-icons/lu';
 import Navbar from './components/Navbar';
@@ -100,8 +102,8 @@ function Homepage() {
       <div className='backgroundImage'></div>
       <div className='heropage'>
         <img style={{ width: '30%',objectFit: 'contain', objectFit: 'contain', margin: "0 auto",filter: 'drop-shadow(-11px -6px 16px white)' }} src='./word-white-logo.png' alt="Logo" />
-        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your</h1>
-        <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}>X<span className='gPurple'>with Super X</span></h1>
+        <h1 className="gWhite fontsmallmobile" style={{margin: '0px auto', width: '100%', textAlign: 'center' }}> Supercharge your <FaXTwitter/></h1>
+        <h1 className="gWhite fontsmallmobile" style={{ margin: '0px auto', width: '100%', textAlign: 'center'}}>with <span className='gPurple'>Super X</span></h1>
         {/* <h1 className="gWhite" style={{ margin: '0 auto',marginTop:'1rem', fontSize:'1rem' }}> 4.5⭐  |  500+ Users</h1> */}
 
         <div className='animated-border-box-container' style={{ margin: '3rem auto' }}>
@@ -112,12 +114,12 @@ function Homepage() {
         </div>
         <div style={{display:'flex',margin:'2rem 0', width: '80%', animation:'100s Unlimitedscroll infinite linear'}}>
           <TwitterCard name="Y.J." username="@depindaddy" verify={true} tweet={"SuperX is my secret weapon for those days when the words just won't flow."} pic={"https://pbs.twimg.com/profile_images/1765084459169169408/v7Gv_e5Z_400x400.jpg"} />
-          <TwitterCard name="Hamza" username="@mostuselessboy" verify={false} tweet={"This SuperX Extension is like Co-Pilot for Twitter🔥"} pic={"https://pbs.twimg.com/profile_images/1761065591090335744/jxUokIB3_400x400.jpg"} />
-          <TwitterCard name="Crypto_mit" username="@nelsonpaul_tez" verify={true} tweet={"With SuperX, my tweets have never been more on point. AI FTW!"} pic={"https://pbs.twimg.com/profile_images/1682403310257721346/kcaIrLGk_400x400.jpg"} />
+          <TwitterCard name="Hamza" username="@mostuselessboy" verify={false} tweet={"This SuperX Extension is like Co-Pilot for Twitter🔥"} pic={"https://pbs.twimg.com/profile_images/1811670597115527169/uBe6MT63_400x400.jpg"} />
+          <TwitterCard name="Crypto_mit" username="@nelsonpaul_tez" verify={true} tweet={"With SuperX, my tweets have never been more on point. AI FTW!"} pic={"https://pbs.twimg.com/profile_images/1824206686959157249/moz8OPMr_400x400.jpg"} />
           <TwitterCard name="Cluster Protocol" username="@clusterprotocol" verify={true} tweet={"Tweet smarter, not harder – thanks to SuperX 💪"} pic={"https://pbs.twimg.com/profile_images/1746246376756039680/qg_oAWkf_400x400.jpg"} />
           <TwitterCard name="Y.J." username="@depindaddy" verify={true} tweet={"SuperX is my secret weapon for those days when the words just won't flow."} pic={"https://pbs.twimg.com/profile_images/1765084459169169408/v7Gv_e5Z_400x400.jpg"} />
-          <TwitterCard name="Hamza" username="@mostuselessboy" verify={false} tweet={"This SuperX Extension is like Co-Pilot for Twitter🔥"} pic={"https://pbs.twimg.com/profile_images/1761065591090335744/jxUokIB3_400x400.jpg"} />
-          <TwitterCard name="Crypto_mit" username="@nelsonpaul_tez" verify={true} tweet={"With SuperX, my tweets have never been more on point. AI FTW!"} pic={"https://pbs.twimg.com/profile_images/1682403310257721346/kcaIrLGk_400x400.jpg"} />
+          <TwitterCard name="Hamza" username="@mostuselessboy" verify={false} tweet={"This SuperX Extension is like Co-Pilot for Twitter🔥"} pic={"https://pbs.twimg.com/profile_images/1811670597115527169/uBe6MT63_400x400.jpg"} />
+          <TwitterCard name="Crypto_mit" username="@nelsonpaul_tez" verify={true} tweet={"With SuperX, my tweets have never been more on point. AI FTW!"} pic={"https://pbs.twimg.com/profile_images/1824206686959157249/moz8OPMr_400x400.jpg"} />
           <TwitterCard name="Cluster Protocol" username="@clusterprotocol" verify={true} tweet={"Tweet smarter, not harder – thanks to SuperX 💪"} pic={"https://pbs.twimg.com/profile_images/1746246376756039680/qg_oAWkf_400x400.jpg"} />
           
         </div>

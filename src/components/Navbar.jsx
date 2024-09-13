@@ -5,7 +5,11 @@ const Navbar = () => {
   const { user } = useAuthContext();
     return (
         <nav className="navbar-container">
-          <div className="logo"><img src='./word-white-logo.png'/></div>
+          <div>
+
+          <div className="logo" style={{marginBottom:"-16px"}}><img src='./word-white-logo.png'/></div>
+          <div style={{display:"flex",alignItems:"center",gap:"0.5rem"}}><p>Powered by </p> <img src='./cluster-protocol.png' style={{width:"4.5rem"}}/></div>
+          </div>
           <div className="links">
             <a href="#home" className="link-item">Home</a>
             <a href="#features" className="link-item">Features</a>

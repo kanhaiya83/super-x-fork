@@ -46,7 +46,7 @@ img {
 .navbar-container {
   border-radius: 0.7rem;
   margin: 0 1VW;
-  height: 4rem;
+  height: 5.5rem;
   display: flex;
   backdrop-filter: blur(1rem);
   position: fixed;
