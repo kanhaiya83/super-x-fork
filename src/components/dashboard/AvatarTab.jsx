@@ -28,7 +28,7 @@ const avatarData = [
 ]
 export default function SectionAvatar(){
 
-  const { userData } = useAuthContext();
+  const { userData , userDataQuery } = useAuthContext();
   const avatarID = userData.avatarID || 0
   const userAvatarData= avatarData[avatarID]
   const handleAvatarUpdate=async(id)=>{
@@ -38,6 +38,7 @@ export default function SectionAvatar(){
       );
       if (res.data && res.data.success) {
         successToast("Avatar changed successfully!");
+        userDataQuery.refetch()
       } else {
         errorToast("Could not change the avatar");
       }
@@ -79,9 +80,9 @@ export default function SectionAvatar(){
             </h2>
             <button className="sidebarButton" style={{width:"90%", minWidth:'10rem' , margin:'0'}} onClick={()=>{handleAvatarUpdate(index)}} disabled={index==avatarID}>
                 <GrUserFemale    style={{marginRight:'1rem'}}></GrUserFemale >
-                <Link to={"/dashboard/home"}>
+                
                 <h1 style={{fontSize:'1rem'}}>{index==avatarID ? "Selected" : "Select"}</h1>
-                </Link>
+               
             </button>
         </div>
         })
