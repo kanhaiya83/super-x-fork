@@ -148,6 +148,7 @@ const MyPromptsTab = () => {
         {/* <button className="ml-auto btn1 z-[999] relative w-fit font-manrope font-bold text-lg text-white px-[28px] py-[5px] bg-[#0E45B7AB] rounded-[4px]">
         RESET
       </button> */}
+          {/*
           <h2>Your active prompt:</h2>
 
       <textarea className="p-[20px] white-border outline-none mt-[11px] mb-[14px] w-full h-[179px] text-white bg-transparent rounded-[13px]" value={customPrompt} onChange={handlePromptChange}></textarea>
@@ -170,7 +171,8 @@ const MyPromptsTab = () => {
           <li>&lt;characterLimit&gt;Characters limit selected</li>
           <li>&lt;language&gt;Language selected</li>
         </ul>
-      </div>
+      </div> 
+          */}
      
         </div>
       <div>

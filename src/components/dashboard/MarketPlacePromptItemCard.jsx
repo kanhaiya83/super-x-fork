@@ -44,8 +44,8 @@ const MarketPlacePromptItemCard = ({data,setDataToShowInPromptModal}) => {
   return (
     <div key={data.id} className="promptCard" style={{width:"100%"}}>
     <h1>{data.title}</h1>
-    <h2>{data.prompt.slice(0,80)}...</h2>
-    <button
+    {/* <h2>{data.prompt.slice(0,80)}...</h2> */}
+    {/* <button
     onClick={()=>{
       setDataToShowInPromptModal({
         title:data.title,
@@ -59,7 +59,7 @@ const MarketPlacePromptItemCard = ({data,setDataToShowInPromptModal}) => {
         style={{ marginRight: "1rem" }}
       ></GrView>
         <h1 style={{ fontSize: "1rem" }}>Show Prompt</h1>
-    </button>
+    </button> */}
     <button
     onClick={()=>{if(!usePromptMutation.isLoading){toast.promise(usePromptMutation.mutateAsync(),{pending:"Saving the prompt"})}}}
       className="sidebarButton bg-transparent"

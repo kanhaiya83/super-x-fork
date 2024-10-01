@@ -21,9 +21,9 @@ const SavedPromptCard = ({ data }) => {
   return (
     <div className="promptCard">
       <h1>{data.title}</h1>
-      <h2>
+      {/* <h2>
         {data.prompt.slice(0,80)}...
-      </h2>
+      </h2> */}
       <button
 
       onClick={()=>{if(!usePromptMutation.isLoading){toast.promise(usePromptMutation.mutateAsync(),{pending:"Saving the prompt",error:"Some error occurred!!"})}}}
